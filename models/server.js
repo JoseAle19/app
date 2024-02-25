@@ -12,11 +12,11 @@ export class Server {
         this.routes();
     }
 
-middleWares(){
-    this.app.use(express.json())
-    this.app.use(cors())
-}
-    async connectToDb() {
+    middleWares(){
+        this.app.use(express.json())
+        this.app.use(cors())
+    }
+    async connectToDb(){
         return dbConnection()
     }
 

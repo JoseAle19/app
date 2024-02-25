@@ -23,6 +23,8 @@ export const conductorController = async (req, res) => {
         const newbarCode = new BarModel({ code, description: 'des' })
         newbarCode.save()
 
+
+        //status code 201 = creado
         return res.status(200).json({
             status: true,
             message: 'Codigo de barras guardado'
